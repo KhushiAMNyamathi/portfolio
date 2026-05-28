@@ -1,0 +1,77 @@
+@import "../../app.scss";
+
+.services {
+  background: #0c0c1d;
+  padding: 100px 40px;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+  }
+
+  .header {
+    margin-bottom: 60px;
+
+    .label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #a855f7;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 16px;
+
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+
+    .sub {
+      font-size: 16px;
+      color: #aaa;
+      max-width: 560px;
+      line-height: 1.8;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: #111132;
+    border: 1px solid #a855f720;
+    border-radius: 16px;
+    padding: 32px 28px;
+    cursor: default;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: #a855f7;
+    }
+
+    .icon {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 14px;
+      color: #888;
+      line-height: 1.8;
+    }
+  }
+}

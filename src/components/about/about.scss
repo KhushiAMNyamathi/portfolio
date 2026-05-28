@@ -1,0 +1,119 @@
+@import "../../app.scss";
+
+.about {
+  background: #0e0e24;
+  padding: 100px 40px;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #a855f7;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+
+    .desc {
+      font-size: 18px;
+      color: #aaa;
+      line-height: 1.9;
+    }
+
+    .tagsWrapper {
+      overflow: hidden;
+      margin-top: 8px;
+      width: 100%;
+
+      .tags {
+        display: flex;
+        gap: 12px;
+        width: max-content;
+
+        .tag {
+          padding: 8px 20px;
+          border-radius: 20px;
+          background: #1a1a3e;
+          border: 1px solid #a855f740;
+          font-size: 13px;
+          color: #a855f7;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .imageContainer {
+    background: linear-gradient(135deg, #1a1a3e, #2a1a4e);
+    border-radius: 20px;
+    height: 420px;
+    border: 1px solid #a855f730;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include mobile {
+      height: 260px;
+    }
+  }
+  .tagsWrapper {
+    overflow: hidden;
+    margin-top: 8px;
+    width: 100%;
+
+    .tags {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+
+      .tag {
+        padding: 8px 20px;
+        border-radius: 20px;
+        background: #1a1a3e;
+        border: 1px solid #a855f740;
+        font-size: 13px;
+        color: #a855f7;
+        white-space: nowrap;
+        flex-shrink: 0;
+
+        @include mobile {
+          font-size: 12px;
+          padding: 6px 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import "../../app.scss";
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    padding: 0 40px;
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+      padding-top: 100px;
+
+      @include mobile {
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      h2 {
+        font-size: 15px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #a855f7, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @include mobile {
+          font-size: 13px;
+        }
+      }
+
+      h1 {
+        font-size: 54px;
+        line-height: 1.15;
+        font-weight: 700;
+
+        span {
+          background: linear-gradient(90deg, #a855f7, #6366f1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        @include mobile {
+          font-size: 32px;
+        }
+      }
+
+      .desc {
+        font-size: 16px;
+        color: #aaa;
+        line-height: 1.8;
+        max-width: 500px;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        .btn-primary {
+          padding: 14px 28px;
+          background: linear-gradient(90deg, #a855f7, #6366f1);
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 15px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.08);
+            background: linear-gradient(90deg, #9333ea, #4f46e5);
+            box-shadow: 0 0 20px #a855f760;
+          }
+        }
+
+        .btn-outline {
+          padding: 14px 28px;
+          background: transparent;
+          border: 1px solid #a855f7;
+          border-radius: 10px;
+          color: #a855f7;
+          font-size: 15px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.08);
+            background: linear-gradient(90deg, #a855f7, #6366f1);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 0 20px #a855f760;
+          }
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 35vh;
+    bottom: -80px;
+    white-space: nowrap;
+    color: #ffffff07;
+    font-weight: 800;
+    pointer-events: none;
+    left: 0;
+  }
+
+  .imageContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 95%;
+
+    @include mobile {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom center;
+    }
+  }
+}

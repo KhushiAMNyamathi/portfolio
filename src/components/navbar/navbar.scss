@@ -1,0 +1,94 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: transparent;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+
+    @include mobile {
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #a855f7, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 3px;
+      flex-shrink: 0;
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    .navLinks {
+      display: flex;
+      gap: 32px;
+
+      a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 15px;
+        font-weight: 400;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #a855f7;
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-shrink: 0;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        overflow: hidden;
+
+        img {
+          width: 22px;
+          height: 22px;
+          min-width: 22px;
+          min-height: 22px;
+          max-width: 22px;
+          max-height: 22px;
+          object-fit: contain;
+          opacity: 0.7;
+          transition: transform 0.2s ease, opacity 0.2s ease;
+
+          &:hover {
+            transform: scale(1.2);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
